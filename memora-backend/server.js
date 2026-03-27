@@ -87,6 +87,7 @@ app.use("/api/user", require("./routes/user"));
 app.use("/api/topics", require("./routes/topics"));
 app.use("/api/doctags", require("./routes/doctags"));
 app.use("/api/journal", require("./routes/journal"));
+app.use("/api/sessions", require("./routes/sessions"));
 // app.use('/api/revisions', require('./routes/revisions'));
 // app.use('/api/neuro', require('./routes/neuro'));
 

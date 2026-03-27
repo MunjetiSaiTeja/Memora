@@ -519,6 +519,13 @@ router.post(
       const docTag = new DocTag(docTagData);
       await docTag.save();
 
+      console.log('📝 DocTag created successfully:', {
+        id: docTag._id,
+        name: docTag.name,
+        attachmentsCount: docTag.attachments?.length || 0,
+        firstAttachmentUrl: docTag.attachments?.[0]?.url?.substring(0, 100) + '...' || 'No attachments'
+      });
+
       res.status(201).json({
         success: true,
         message: `${
